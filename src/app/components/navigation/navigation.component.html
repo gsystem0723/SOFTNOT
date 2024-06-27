@@ -1,0 +1,89 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+
+    <mat-accordion>
+      <mat-expansion-panel hideToggle class="panel-expansion">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>home</mat-icon>
+            Inicio
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="panel-expansion">
+
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>edit</mat-icon>
+            Protocolar
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <button mat-button color="primary" (click)="vista('ep')">
+          <mat-icon>checked</mat-icon>
+          Escritura Pública
+        </button>
+
+        <button mat-button color="primary" (click)="vista('tv')">
+          <mat-icon>checked</mat-icon>
+          Transferencia Vehicular
+        </button>
+      </mat-expansion-panel>
+
+
+      <mat-expansion-panel class="panel-expansion">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>file_copy</mat-icon>
+            Extraprotocolar
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button color="primary" (click)="vista('listar_pv')">
+          <mat-icon>checked</mat-icon>
+          Permiso de Viaje
+        </button>
+        <button mat-button color="primary">
+          <mat-icon>checked</mat-icon>
+          Legalización de Libros
+        </button>
+      </mat-expansion-panel>
+
+
+
+      <mat-expansion-panel hideToggle class="panel-expansion">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>supervisor_account</mat-icon>
+            Permisos
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+
+
+
+    </mat-accordion>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" style="background-color:#111f3b;">
+      @if (isHandset$ | async) {
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      }
+      <span id="sysTitulo">SISTEMA NOTARIAL - NOTARIA FERNANDINI</span>
+    </mat-toolbar>
+    <div>
+
+    </div>
+    <div class="row">
+      <div id="sysPanel">
+        <router-outlet />
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

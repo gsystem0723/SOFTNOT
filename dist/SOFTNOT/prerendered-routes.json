@@ -1,0 +1,7 @@
+{
+  "routes": [
+    "/extraprotocolar/listar-permiso-viaje",
+    "/extraprotocolar/registrar-permiso-viaje",
+    "/navigation"
+  ]
+}
