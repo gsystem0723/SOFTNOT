@@ -3,14 +3,21 @@
 }
 
 .sidenav {
-  width: 300px;
+  width: 250px;
+  background-color: white;
+  border-radius: 0%;
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
+  background-color: #111f3b;
+  height: 100px;
+
 }
 
+
 /*
+f0f0f0
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
@@ -19,10 +26,35 @@
 */
 #sysTitulo {
   font-weight: bold;
-  color: #ebebeb;
+  color: #111f3b;
+
 }
 
-#sysPanel {
-  padding: 15px;
-  background-color: #ebebeb;
+
+
+.mat-toolbar {
+  color: #f0f0f0;
+  background-color: #9ec7c9;
+  border: 1px solid #b4b0b0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 15px;
+
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+}
+
+.panel-expansion {
+  background-color: white;
+  color: #111f3b !important;
+}
+
+.mat-expansion-panel-header-title {
+  font-weight: bold;
+  color: #111f3b;
+}
+
+.mat-icon {
+  margin-right: 8px;
 }

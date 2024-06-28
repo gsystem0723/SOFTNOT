@@ -25,8 +25,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
 
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -42,7 +43,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule, MatIconModule, MatFormFieldModule, MatInputModule
+    MatListModule, MatIconModule, MatFormFieldModule, MatInputModule, MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [
     provideHttpClient(withFetch()),

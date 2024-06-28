@@ -1,17 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 
 html,
-body {
-    height: 100%;
-}
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'entypo-fontello';
+    background-color: #f0f0f0 !important;
 }
 
 .clTituloModulo {
     font-weight: bold;
     font-size: 18px;
     color: #111f3b;
+}
+
+.mat-stepper-horizontal-line {
+    min-width: 100px !important;
+    max-width: 100px !important;
+}
+
+
+#sysPanel {
+    background-color: white !important;
+    height: 90%;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #d3cdcd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* Define la sombra */
+
+}
+
+.btnV1 {
+    background-color: #111f3b !important;
+}
+
+.btnV2 {
+    color: #111f3b !important;
 }

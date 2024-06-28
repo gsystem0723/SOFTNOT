@@ -1,5 +1,6 @@
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -34,8 +35,16 @@ export class RegistrarPermisoViajeComponent {
   displayedColumns: string[] = ['position', 'condicion', 'participante', 'tipodoc', 'documento'];
   dataSource = ELEMENT_DATA;
 
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+
   constructor(
-    private router: Router
+    private router: Router,
+    private _formBuilder: FormBuilder
   ) { }
 
   onClkVolver() {

@@ -1,83 +1,77 @@
-<div class="container">
-    <!-- Panel -->
-    <div class="card mt-4">
-        <div class="card-header clTituloModulo">
-            LISTADO DE PERMISO DE VIAJE
-        </div>
-        <div class="card-body">
+<div>
+    <div>
 
 
-            <section>
-                <div>
-                    <mat-form-field class="example-form-field">
-                        <mat-label>N° Cronológico</mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
-                    &nbsp;
-                    <mat-form-field class="example-form-field">
-                        <mat-label>Nombre del Participante</mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
-                    &nbsp;
+        <section>
+            <div>
+                <mat-form-field class="example-form-field">
+                    <mat-label>N° Cronológico</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                &nbsp;
+                <mat-form-field class="example-form-field">
+                    <mat-label>Nombre del Participante</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                &nbsp;
 
 
-                </div>
-                <div class="example-button-row">
-                    <button mat-raised-button>
-                        <mat-icon>search</mat-icon>
-                        Buscar</button>
-                    &nbsp;
-                    <button mat-raised-button>
-                        <mat-icon>clear</mat-icon>
-                        Limpiar Campos</button>
-                    &nbsp;
-                    <button mat-flat-button (click)="onClkNuevoRegistro()">
-                        <mat-icon>add</mat-icon>
-                        Nuevo Registro</button>
+            </div>
+            <div class="example-button-row">
+                <button mat-raised-button class="btnV2">
+                    <mat-icon>search</mat-icon>
+                    Buscar</button>
+                &nbsp;
+                <button mat-raised-button class="btnV2">
+                    <mat-icon>clear</mat-icon>
+                    Limpiar Campos</button>
+                &nbsp;
+                <button class="btnV1" mat-flat-button (click)="onClkNuevoRegistro()">
+                    <mat-icon>add</mat-icon>
+                    Nuevo Registro</button>
 
 
-                </div>
-            </section>
-            <br>
+            </div>
+        </section>
+        <br>
 
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-                <!--- Note that these columns can be defined in any order.
+            <!--- Note that these columns can be defined in any order.
                       The actual rendered columns are set as a property on the row definition" -->
 
-                <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                    <th mat-header-cell *matHeaderCellDef> N° Control</th>
-                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-                </ng-container>
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> N° Control</th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
 
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef> N° Cronológico </th>
-                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> N° Cronológico </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
 
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                    <th mat-header-cell *matHeaderCellDef> Tipo de Permiso </th>
-                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-                </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef> Tipo de Permiso </th>
+                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
 
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                    <th mat-header-cell *matHeaderCellDef> Participantes </th>
-                    <td mat-cell *matCellDef="let element"> ---- </td>
-                </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef> Participantes </th>
+                <td mat-cell *matCellDef="let element"> ---- </td>
+            </ng-container>
 
-                <ng-container matColumnDef="destino">
-                    <th mat-header-cell *matHeaderCellDef> Destino </th>
-                    <td mat-cell *matCellDef="let element"> {{element.destino}} </td>
-                </ng-container>
+            <ng-container matColumnDef="destino">
+                <th mat-header-cell *matHeaderCellDef> Destino </th>
+                <td mat-cell *matCellDef="let element"> {{element.destino}} </td>
+            </ng-container>
 
 
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-        </div>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
     </div>
 </div>

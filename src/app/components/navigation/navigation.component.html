@@ -1,7 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>
+
+      <span>
+        <img src="logonotaria.png">
+      </span>
+
+    </mat-toolbar>
+    <br>
+    <br>
 
     <mat-accordion>
       <mat-expansion-panel hideToggle class="panel-expansion">
@@ -68,22 +76,23 @@
 
 
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary" style="background-color:#111f3b;">
-      @if (isHandset$ | async) {
+  <mat-sidenav-content style="background-color: #f0f0f0;">
+    <mat-toolbar color="primary">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      }
-      <span id="sysTitulo">SISTEMA NOTARIAL - NOTARIA FERNANDINI</span>
+
+      <span id="sysTitulo">
+        <mat-icon>edit</mat-icon>
+        REGISTRO DE PERMISO DE VIAJE
+      </span>
+
     </mat-toolbar>
     <div>
 
     </div>
-    <div class="row">
-      <div id="sysPanel">
-        <router-outlet />
-      </div>
+    <div id="sysPanel">
+      <router-outlet />
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
